@@ -1,0 +1,42 @@
+<?php
+/**
+Generate QR code (CZK) and save them to local storage.
+*/
+require_once __DIR__.'/qrstart.php';
+
+$data=[
+	'amount' => 1000,
+	'currency' => 'CZK',
+	'date' => date("Ymd"),
+	'account' => '123456789/6666',
+	'note' => 'QR Platba',
+	'variable' => '2021',
+	'size' => 150
+];
+
+$qrstart = new QrStart('your-api-key');
+$response = $qrstart->qrCode($data);
+$result = json_decode($response, true);
+
+if ($result['success'] === true) {
+	// path to save qr code
+	$save = __DIR__.'/save-path/qrcode.png',
+	// save
+	$ch = curl_init();
+	$fp = fopen($save, "w");
+	curl_setopt($ch, CURLOPT_URL, $result['image']);
+	curl_setopt($ch, CURLOPT_HEADER, 0);
+	curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+	curl_setopt($ch, CURLOPT_FILE, $fp);
+	$curl_result = curl_exec($ch);
+	$errorCode = curl_errno($ch);
+	if (empty($errorCode)) {
+		echo "File ".$save." saved.";
+	} else {
+		echo "Error: ".curl_error($ch);
+	}
+	curl_close($ch);
+	fclose($fp);
+} else {
+	echo "Error: ".$result['message'];
+}
