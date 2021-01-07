@@ -2,7 +2,7 @@
 /**
 Generate QR code (CZK) and save them to local storage.
 */
-require_once __DIR__.'/qrstart.php';
+require_once __DIR__.'/../lib/qrstart.php';
 
 $data=[
 	'amount' => 1000,
@@ -10,7 +10,7 @@ $data=[
 	'date' => date("Ymd"),
 	'account' => '123456789/6666',
 	'note' => 'QR Platba',
-	'variable' => '2021',
+	'variable' => '20210001',
 	'size' => 150
 ];
 
