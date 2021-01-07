@@ -7,7 +7,7 @@ PHP client for [qrstart.eu](https://www.qrstart.eu/) services.
 **Request:**
 
 ````php
-$params = [
+$data = [
 	'amount' => 1000,
 	'currency' => 'CZK',
 	'date' => '20210101',

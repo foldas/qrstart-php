@@ -21,5 +21,5 @@ $result = json_decode($response, true);
 if ($result['success'] === true) {
 	echo "<img src=\"".$result['image']."\" alt=\"QR code\">";
 } else {
-	echo "Error: ".$result['message'];
+	echo "API error: ".$result['message'];
 }

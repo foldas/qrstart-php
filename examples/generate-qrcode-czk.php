@@ -31,12 +31,12 @@ if ($result['success'] === true) {
 	$curl_result = curl_exec($ch);
 	$errorCode = curl_errno($ch);
 	if (empty($errorCode)) {
-		echo "File ".$save." saved.";
+		echo "QR Code saved to ".$save;
 	} else {
-		echo "Error: ".curl_error($ch);
+		echo "Download error: ".curl_error($ch);
 	}
 	curl_close($ch);
 	fclose($fp);
 } else {
-	echo "Error: ".$result['message'];
+	echo "API error: ".$result['message'];
 }
