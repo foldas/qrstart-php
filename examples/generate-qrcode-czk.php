@@ -26,9 +26,9 @@ if ($result['success'] === true) {
 	$fp = fopen($save, "w");
 	curl_setopt($ch, CURLOPT_URL, $result['image']);
 	curl_setopt($ch, CURLOPT_HEADER, 0);
-	curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+	curl_setopt($ch, CURLOPT_TIMEOUT, 10);
 	curl_setopt($ch, CURLOPT_FILE, $fp);
-	$curl_result = curl_exec($ch);
+	curl_exec($ch);
 	$errorCode = curl_errno($ch);
 	if (empty($errorCode)) {
 		echo "QR Code saved to ".$save;

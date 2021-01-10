@@ -22,16 +22,16 @@ class QrStart {
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json', 'Content-Type: application/json'));
 		curl_setopt($ch, CURLOPT_POST, true);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-		curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+		curl_setopt($ch, CURLOPT_TIMEOUT, 10);
 		$response = curl_exec($ch);
 		if (curl_errno($ch)) {
-			$curl_errno = curl_error($ch);
+			$curl_error = curl_error($ch);
 		}
 		curl_close($ch);
-		if (isset($curl_errno)) {
+		if (isset($curl_error)) {
 			$result=[
 				'success' => false,
-				'message' => $curl_errno
+				'message' => $curl_error
 			];
 		} else {
 			$transform = json_decode($response, true);
