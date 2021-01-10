@@ -11,7 +11,8 @@ $data=[
 	'account' => '123456789/6666',
 	'note' => 'QR Platba',
 	'variable' => '20210001',
-	'size' => 150
+	'size' => 150,
+	'tag' => 'Order 20210001'
 ];
 
 $qrstart = new QrStart('your-api-key');

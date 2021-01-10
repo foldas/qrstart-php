@@ -53,6 +53,7 @@ Download QR code (PNG) from our storage to you. Generated images are deleted con
 - `variable` - variable symbol
 - `constant` - constant symbol
 - `specific` - specific symbol
-- `note` - note
+- `note` - note for the payer
 - `date` - due date (YYYYMMDD)
 - `size` - size of generated png image in pixels (default 150)
+- `tag` - internal note (visible in the dashboard, max. 50 chars)
