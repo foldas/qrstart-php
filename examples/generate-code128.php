@@ -5,13 +5,9 @@ Generate QR code (EUR) and diplay as image.
 require_once __DIR__.'/../lib/qrstart.php';
 
 $data=[
-	'amount' => 1000,
-	'currency' => 'EUR',
-	'date' => date("Ymd"),
-	'iban' => 'SK1234000000000000999999',
-	'swift' => 'GIBASKBX',
-	'note' => 'QR Platba',
-	'variable' => '20210001'
+	'type' => 'code128',
+	'code' => '123456789',
+	'size' => 1
 ];
 
 $qrstart = new QrStart('your-api-key');

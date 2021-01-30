@@ -25,9 +25,9 @@ if ($result['success'] === true) {
 	// save
 	$ch = curl_init();
 	$fp = fopen($save, "w");
-	curl_setopt($ch, CURLOPT_URL, $result['image']);
+	curl_setopt($ch, CURLOPT_URL, $result['url']);
 	curl_setopt($ch, CURLOPT_HEADER, 0);
-	curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+	curl_setopt($ch, CURLOPT_TIMEOUT, 20);
 	curl_setopt($ch, CURLOPT_FILE, $fp);
 	curl_exec($ch);
 	$errorCode = curl_errno($ch);
