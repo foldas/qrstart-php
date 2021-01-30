@@ -72,7 +72,7 @@ Download QR code (PNG) or PDF file from our storage to you. Generated files are 
 - `type` - type of code
 	- possible values are **bank**, **ean13**, **code128** (default bank)
 
-- for **bank**:
+- type **bank**:
 	- `amount` - the amount (int or float)
 		- *required*
 	- `currency` - CZK or EUR
@@ -92,21 +92,21 @@ Download QR code (PNG) or PDF file from our storage to you. Generated files are 
 		- for pdf the size is in mm
 	- `margin` - image margin in pixels (default 2)
 	- `tag` - internal note (visible in the dashboard, max. 50 chars)
-- if you want to put QR Code to you pdf file, add following parameters
+- if you want put QR Code to you pdf file, add following parameters
 	- `file` - location of pdf file on server
 	- `top` - position from top in mm
 	- `bottom` - position from bottom in mm
-		- in one request use left or right
+		- in one request use top or bottom
 	- `left` - position from left in mm
 	- `right` - position from right in mm
 		- in one request use left or right
 
-- for **ean13**:
+- type **ean13**:
 	- `code` - EAN-13 code
 		- *required*
 	- `size` - 1-5 (int) (default 2)
 
-- for **code128**:
+- type **code128**:
 	- `code` - some text
 		- *required*
 	- `size` - 1-5 (int) (default 2)
