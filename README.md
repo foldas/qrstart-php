@@ -60,6 +60,8 @@ $response = $qrstart->qrCode($data);
 
 Download QR code (PNG) or PDF file from our storage to you. Generated files are deleted continuously.
 
+**False response:**
+
 ````js
 {
 	'success': false,
@@ -87,7 +89,7 @@ Download QR code (PNG) or PDF file from our storage to you. Generated files are 
 	- `constant` - constant symbol
 	- `specific` - specific symbol
 	- `note` - note for the payer
-	- `date` - due date (YYYYMMDD)
+	- `date` - due date (format YYYYMMDD)
 	- `size` - size of generated png image in pixels (min. 50, max. 600, default 150)
 		- for pdf the size is in mm
 	- `margin` - image margin in pixels (default 2)
@@ -111,6 +113,6 @@ Download QR code (PNG) or PDF file from our storage to you. Generated files are 
 		- *required*
 	- `size` - 1-5 (int) (default 2)
 
-#### Help
+### Help
 
-Please check the **example** folder.
+Please check the **examples** folder.
