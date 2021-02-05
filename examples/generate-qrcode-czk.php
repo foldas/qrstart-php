@@ -2,7 +2,7 @@
 /**
 Generate QR code (CZK) and save them to local storage.
 */
-require_once __DIR__.'/../lib/qrstart.php';
+require_once __DIR__.'/../lib/QrStart.php';
 
 $data=[
 	'amount' => 1000,

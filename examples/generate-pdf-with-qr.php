@@ -2,7 +2,7 @@
 /**
 Generate QR code (CZK) and put it into PDF file, and save them to local storage.
 */
-require_once __DIR__.'/../lib/qrstart.php';
+require_once __DIR__.'/../lib/QrStart.php';
 
 if (!empty($_FILES['file'])) {
 	move_uploaded_file($_FILES['file']['tmp_name'],"file.pdf");

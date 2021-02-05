@@ -1,8 +1,19 @@
-# QR Start API client for PHP
+## QR Start API client for PHP
 
 PHP client for [qrstart.eu](https://www.qrstart.eu/) services.
 
-## Usage
+### Installation
+
+Download by hand **lib** folder:
+````html
+https://github.com/foldas/qrstart-php/archive/main.zip
+````
+By composer:
+````html
+install foldas/qrstart-php
+````
+
+### Usage
 
 **Request for QR Code:**
 
@@ -69,7 +80,7 @@ Download QR code (PNG) or PDF file from our storage to you. Generated files are 
 }
 ````
 
-### Input parameters
+#### Input parameters
 
 - `type` - type of code
 	- possible values are **bank**, **ean13**, **code128** (default bank)
@@ -113,6 +124,6 @@ Download QR code (PNG) or PDF file from our storage to you. Generated files are 
 		- *required*
 	- `size` - 1-5 (int) (default 2)
 
-### Help
+#### Help
 
 Please check the **examples** folder.

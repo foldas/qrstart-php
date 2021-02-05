@@ -2,7 +2,7 @@
 /**
 Generate QR code (EUR) and diplay as image.
 */
-require_once __DIR__.'/../lib/qrstart.php';
+require_once __DIR__.'/../lib/QrStart.php';
 
 $data=[
 	'type' => 'code128',
