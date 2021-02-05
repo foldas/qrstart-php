@@ -10,7 +10,7 @@ https://github.com/foldas/qrstart-php/archive/main.zip
 ````
 By composer:
 ````html
-install foldas/qrstart-php
+composer require foldas/qrstart-php
 ````
 
 ### Usage
