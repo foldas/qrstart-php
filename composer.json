@@ -1,5 +1,6 @@
 {
     "name": "foldas/qrstart-php",
+    "version": "1.0",
     "description": "QR Start PHP SDK",
     "keywords": ["qrcode","qrcode-generator","qr-payments","qr-platby"],
     "homepage": "https://www.qrstart.eu",
