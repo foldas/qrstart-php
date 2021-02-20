@@ -91,11 +91,10 @@ Download QR code (PNG) or PDF file from our storage to you. Generated files are 
 	- `currency` - CZK or EUR
 		- *required*
 	- `account` - whole account number include bank code (123-456789123/4567)
-		- *required for CZK currency*
+		- *for CZK currency*
 	- `iban` - IBAN
-		- *required for EUR currency*
+		- *required for EUR currency (or for CZK, if you don't want to fill account)*
 	- `swift` - SWIFT code (BIC)
-		- *required for EUR currency*
 	- `variable` - variable symbol
 	- `constant` - constant symbol
 	- `specific` - specific symbol
