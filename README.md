@@ -90,6 +90,9 @@ Download QR code (PNG) or PDF file from our storage to you. Generated files are 
 		- *required*
 	- `currency` - CZK or EUR
 		- *required*
+	- `bank` - CZ or SK
+		- CZ for czech QR code, SK for slovak QR code (it means CZ for czech bank app, SK for slovak bank app)
+		- if empty, CZ for CZK currency and SK for EUR currency will be used
 	- `account` - whole account number include bank code (123-456789123/4567)
 		- *for CZK currency*
 	- `iban` - IBAN
