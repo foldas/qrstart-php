@@ -83,7 +83,7 @@ Download QR code (PNG) or PDF file from our storage to you. Generated files are 
 #### Input parameters
 
 - `type` - type of code
-	- possible values are **bank**, **ean13**, **code128** (default bank)
+	- possible values are **bank**, **ean13**, **code128**, **text** (default bank)
 
 - type **bank**:
 	- `amount` - the amount (int or float)
@@ -107,7 +107,30 @@ Download QR code (PNG) or PDF file from our storage to you. Generated files are 
 		- for pdf the size is in mm
 	- `margin` - image margin in pixels (default 2)
 	- `tag` - internal note (visible in the dashboard, max. 50 chars)
-- if you want put QR Code to you pdf file, add following parameters
+
+- type **ean13**:
+	- `code` - EAN-13 code
+		- *required*
+	- `size` - 1-5 (int) (default 2)
+		- for pdf the size is in mm
+	- `tag` - internal note (visible in the dashboard, max. 50 chars)
+
+- type **code128**:
+	- `code` - some text
+		- *required*
+	- `size` - 1-5 (int) (default 2)
+		- for pdf the size is in mm
+	- `tag` - internal note (visible in the dashboard, max. 50 chars)
+
+- type **text**:
+	- `code` - some text
+		- *required*
+	- `size` - size of generated png image in pixels (min. 50, max. 600, default 150)
+		- for pdf the size is in mm
+	- `margin` - image margin in pixels (default 2)
+	- `tag` - internal note (visible in the dashboard, max. 50 chars)
+
+- if you want put QR Code to you pdf file (max. size 2 MB), add following parameters
 	- `file` - location of pdf file on server
 	- `top` - position from top in mm
 	- `bottom` - position from bottom in mm
@@ -115,16 +138,6 @@ Download QR code (PNG) or PDF file from our storage to you. Generated files are 
 	- `left` - position from left in mm
 	- `right` - position from right in mm
 		- in one request use left or right
-
-- type **ean13**:
-	- `code` - EAN-13 code
-		- *required*
-	- `size` - 1-5 (int) (default 2)
-
-- type **code128**:
-	- `code` - some text
-		- *required*
-	- `size` - 1-5 (int) (default 2)
 
 #### Help
 
