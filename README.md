@@ -138,6 +138,8 @@ Download QR code (PNG) or PDF file from our storage to you. Generated files are 
 	- `left` - position from left in mm
 	- `right` - position from right in mm
 		- in one request use left or right
+	- `page` - the page on which the image is saved (default 1)
+		- for last page use value -1
 
 #### Help
 
