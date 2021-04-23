@@ -130,7 +130,7 @@ Download QR code (PNG) or PDF file from our storage to you. Generated files are 
 	- `margin` - image margin in pixels (default 2)
 	- `tag` - internal note (visible in the dashboard, max. 50 chars)
 
-- if you want put QR Code to you pdf file (max. size 2 MB), add following parameters
+- if you want put QR Code to you pdf file, add following parameters
 	- `file` - location of pdf file on server
 	- `top` - position from top in mm
 	- `bottom` - position from bottom in mm
