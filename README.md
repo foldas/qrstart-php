@@ -107,6 +107,8 @@ Download QR code (PNG) or PDF file from our storage to you. Generated files are 
 		- for pdf the size is in mm
 	- `margin` - image margin in pixels (default 2)
 	- `tag` - internal note (visible in the dashboard, max. 50 chars)
+	- `reference` - payment identification
+		- only for SK bank EUR currency (variable and constant and specific must be empty)
 
 - type **ean13**:
 	- `code` - EAN-13 code
