@@ -1,0 +1,29 @@
+{
+    "name": "foldas/qrstart-php",
+    "description": "QR Start PHP SDK",
+    "keywords": ["qrcode","qrcode-generator","qr-payments","qr-platby","epc-sepa","epc-qr"],
+    "homepage": "https://www.qrstart.eu",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lukas Foldina",
+            "email": "web@foldina.cz",
+            "homepage": "https://www.foldina.cz",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "support@qrstart.eu",
+        "docs": "https://www.qrstart.eu/en/documentation/"
+    },
+    "require": {
+        "php": ">=5.6.0",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Qr\\": "lib/"
+        }
+    }
+}
