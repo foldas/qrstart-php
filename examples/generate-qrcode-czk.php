@@ -3,7 +3,6 @@
 Generate QR code (CZK) and save them to local storage.
 */
 require_once __DIR__.'/../lib/QrStart.php';
-
 $data=[
 	'amount' => 1000,
 	'currency' => 'CZK',
@@ -14,11 +13,9 @@ $data=[
 	'size' => 150,
 	'tag' => 'Order 20210001'
 ];
-
-$qrstart = new QrStart('your-api-key');
+$qrstart = new Qr\QrStart('your-api-key');
 $response = $qrstart->qrCode($data);
 $result = json_decode($response, true);
-
 if ($result['success'] === true) {
 	// path to save qr code
 	$save = __DIR__.'/save-path/qrcode.png',

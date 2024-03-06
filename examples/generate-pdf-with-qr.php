@@ -3,7 +3,6 @@
 Generate QR code (CZK) and put it into PDF file, and save them to local storage.
 */
 require_once __DIR__.'/../lib/QrStart.php';
-
 if (!empty($_FILES['file'])) {
 	move_uploaded_file($_FILES['file']['tmp_name'],"file.pdf");
 	$data=[
@@ -19,11 +18,9 @@ if (!empty($_FILES['file'])) {
 		'top' => 10,
 		'right' => 10
 	];
-
-	$qrstart = new QrStart('your-api-key');
+	$qrstart = new Qr\QrStart('your-api-key');
 	$response = $qrstart->qrCode($data);
 	$result = json_decode($response, true);
-
 	if ($result['success'] === true) {
 		// path to save pdf code
 		$save = __DIR__.'/file-with-qr.pdf';
