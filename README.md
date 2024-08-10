@@ -28,7 +28,7 @@ $data = [
 	'variable' => '2021',
 	'size' => 150
 ]
-$qrstart = new QrStart('your-api-key');
+$qrstart = new Qr\QrStart('your-api-key');
 $response = $qrstart->qrCode($data);
 ````
 
@@ -57,7 +57,7 @@ $data = [
 	'top' => 10,
 	'right' => 10
 ]
-$qrstart = new QrStart('your-api-key');
+$qrstart = new Qr\QrStart('your-api-key');
 $response = $qrstart->qrCode($data);
 ````
 **Response for PDF file with QR Code:**
