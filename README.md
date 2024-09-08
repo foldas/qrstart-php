@@ -116,6 +116,8 @@ Download QR code (PNG) or PDF file from our storage to you. Generated files are 
 		- for SEPA bank only
 	- `remittance` - remittance text
 		- for SEPA bank only (reference must be empty)
+	- `instant` 0-1 (int) (default 0)
+		- use 1 for instant payment
 
 - type **ean13**:
 	- `code` - EAN-13 code
